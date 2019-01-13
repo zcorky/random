@@ -10,7 +10,7 @@
 ![license](https://img.shields.io/github/license/zcorky/random.svg)
 [![issues](https://img.shields.io/github/issues/zcorky/random.svg)](https://github.com/zcorky/random/issues)
 
-> Random number, random string, random from anything
+Random number, random string, random from anything> 
 
 ## Install
 
@@ -21,12 +21,14 @@ $ npm install @zcorky/random
 ## Usage
 
 ```js
-// typescript
+// typescript, see more in test
 import random, { string, from as randomFrom } from '@zcorky/random';
 
-random(0, 10); // random integer
+random(0, 10); // random one integer value
+// => 8
 
 string(8); // random string, length is 8
+// => cdef19ED
 
 randomFrom([ // random one from array of string
   'http://example11.com',
@@ -39,6 +41,7 @@ randomFrom([ // random 2 from array of string
   'http://example12.com',
   'http://example13.com',
 ], 2);
+// => ['http://example11.com', 'http://example13.com']
 ```
 
 ## License
