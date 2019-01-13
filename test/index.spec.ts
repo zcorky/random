@@ -50,7 +50,11 @@ describe('@zcorky/random', () => {
       '//img.souche.com/20161230/png/fd9f8aecab317e177655049a49b64d02.png'
     ];
 
-    expect(gravatar.some(e => e === randomFrom(gravatar))).toBeTruthy();
+    const r = randomFrom(gravatar);
+    console.log('random: ', r);
+    expect(gravatar.some(e => {
+      return e === r;
+    })).toBeTruthy();
 
     const three = randomFrom(gravatar, 3);
     expect(three.length).toBe(3);
